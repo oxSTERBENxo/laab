@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Внеси име</title>
+</head>
+<body>
+<h2>Добредојде во системот за резервации!</h2>
+
+<form th:action="@{/}" method="post">
+    <label>Внеси го твоето име:</label>
+    <input type="text" name="name" required>
+    <button type="submit">Продолжи</button>
+</form>
+
+<p th:if="${error}" th:text="${error}" style="color:red"></p>
+</body>
+</html>
